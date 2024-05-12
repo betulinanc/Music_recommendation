@@ -50,7 +50,7 @@ Her bir modelin doğruluk, hassasiyet, duyarlılık gibi metrikleriyle performan
 import pandas as pd
 
 # Veriyi yükleme
-data_path = '/content/data.csv'
+data_path = 'data.csv'
 data = pd.read_csv(data_path)
 
 # İlk birkaç satırı göster
