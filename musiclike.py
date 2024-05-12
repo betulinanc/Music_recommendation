@@ -84,6 +84,7 @@ for i, col in enumerate(numeric_columns, 1):
 
 plt.tight_layout()
 plt.show()
+plt.close()
 
 # Tüm sayısal sütunlar için Z-skoru yöntemiyle aykırı değer temizleme öncesi ve sonrası kutu grafiği
 import matplotlib.pyplot as plt
