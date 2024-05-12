@@ -208,6 +208,7 @@ from sklearn.tree import DecisionTreeClassifier
 from sklearn.metrics import accuracy_score, confusion_matrix, ConfusionMatrixDisplay
 import matplotlib.pyplot as plt
 from sklearn.metrics import precision_score
+from sklearn.metrics import recall_score
 
 # Model tanımlamaları
 models = {
