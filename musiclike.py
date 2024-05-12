@@ -128,6 +128,7 @@ def plot_before_after_zscore(df, numeric_columns, threshold=3):
 
     fig.tight_layout()
     plt.show()
+    plt.close()
 
 # Tüm sayısal sütunlar için grafikleri göster
 numeric_columns = data.select_dtypes(include=['float64', 'int64']).columns
@@ -173,6 +174,7 @@ corr_matrix = pd.DataFrame(X_train_scaled, columns=X.columns).corrwith(pd.Series
 top_corr_features = corr_matrix.abs().sort_values(ascending=False).index
 sns.heatmap(pd.DataFrame(X_train_scaled, columns=X.columns)[top_corr_features].corr(), annot=True, cmap='coolwarm')
 plt.show()
+plt.close()
 
 """***Random Forest***"""
 
@@ -188,6 +190,7 @@ feature_importances_rf = pd.Series(model_rf.feature_importances_, index=X.column
 feature_importances_rf.plot(kind='bar', figsize=(6, 4))
 plt.ylabel('Özellik Önemi')
 plt.show()
+plt.close()
 
 """***Recursive Feature Elimination***"""
 
@@ -252,6 +255,7 @@ for feature_set_name, features in feature_sets.items():
         disp.plot(cmap=plt.cm.Blues)
         plt.title(f"Confusion Matrix: {model_name} - {feature_set_name}")
         plt.show()
+        plt.close()
 
         print(f"Model: {model_name}, Feature Set: {feature_set_name}, Accuracy: {accuracy}")
 
@@ -290,6 +294,7 @@ for feature_set_name, features in feature_sets.items():
         disp.plot(cmap=plt.cm.Blues)
         plt.title(f"Confusion Matrix: {model_name} - {feature_set_name}")
         plt.show()
+        plt.close()
 
 # Listeyi bir DataFrame'e dönüştür
 results_df = pd.DataFrame(results)
